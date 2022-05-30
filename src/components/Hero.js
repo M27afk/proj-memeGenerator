@@ -9,7 +9,7 @@ export default function Hero()
             imageUrl:"http://i.imgflip.com/1bij.jpg"
         }
     )
-    console.log(meme)
+  
     function handleChange(event){
         const {name, value} = event.target
          setMeme( prevValue => {
@@ -25,7 +25,7 @@ export default function Hero()
         .then(res=>res.json())
         .then(data=>setMemeImg(data.data.memes))
     },[])
-    console.log(memeImg)
+    
     function generateMeme()
     {
      
@@ -50,7 +50,7 @@ export default function Hero()
             
             </form>
            <div className="meme">
-                <img className="hero--img" src={meme.imageUrl}/>
+                <img className="hero--img" src={meme.imageUrl} alt="memeImage"/>
                 <h2 className="meme--text top">{meme.topText}</h2>
                 <h2 className="meme--text bottom">{meme.bottomText}</h2>
             </div>
