@@ -17,8 +17,9 @@ code {
     monospace;
 }
 
-nav{
+.navbar{
   height: 70px;
+  width: 100%;
   font-size: 12px;
   color: white;
   background:linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
@@ -107,7 +108,7 @@ nav{
   top: 0;
 }
 
-footer{
+.ft{
   
   position:absolute;
   bottom:0;
@@ -130,4 +131,11 @@ a{
 
 a:hover{
   color: cornflowerblue;
+}
+
+@media only screen and (max-width: 360px) {
+
+  .navbar, .ft ,.hero--content {
+    width:130%;
+  }
 }
